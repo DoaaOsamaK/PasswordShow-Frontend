@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Augalassia</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <form action="login">
+            <h1>Log in</h1>
+            <div class="input">
+                <input type="text" placeholder="Username" required>
+                <i class='bx bxs-user'></i>
+             </div>
+
+            <div class="input password">
+                <input type="password" placeholder="Password" required id="passwordInput">
+                <i class='bx bxs-show' onclick="togglePasswordVisibility()"></i>
+                <i class='bx bxs-hide' style="display: none;" onclick="togglePasswordVisibility()"></i>
+            </div>
+
+            <div class="remember">
+                <label><input type="checkbox" name="remember" id="">Remember me</label>
+                <a href="#" class="forget">Forget password?</a>
+            </div>
+            
+            <button type="submit" class="btn">Login</button>
+
+            <div class="registLink">
+                <p>Don't have an account? <a href="#">Register now!</a></p>
+            </div>
+
+            <p class="dodo">doaaosamak</p>
+
+        </form>
+    </div>
+    <script src="assets/main.js"></script>
+</body>
+</html>
