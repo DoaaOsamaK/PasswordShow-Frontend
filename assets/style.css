@@ -1,39 +1,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-*{
-    margin:0;
-    padding:0;
+
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: "Poppins";
 }
-body{
+
+body {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url('imgs/background2.jpg') no-repeat;
+    background: url('imgs/background2.jpg') no-repeat center center fixed;
+    background-size: cover; /* Ensures the background image covers the entire viewport */
 }
-.wrapper{
+
+.wrapper {
     background: transparent;
-    border:3px solid rgba(255, 255, 255, 0.2);
-    width:420px;
-    color:#fff;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    max-width: 420px; /* Changed from width to max-width for responsiveness */
+    width: 100%; /* Takes up 100% of the parent width, up to 420px */
+    color: #fff;
     border-radius: 10px;
-    padding:30px 40px;
+    padding: 30px 40px;
     backdrop-filter: blur(20px);
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease-in-out; /* Smooth transition for resizing */
 }
-.wrapper h1{
+
+.wrapper h1 {
     font-size: 36px;
     text-align: center;
 }
-.wrapper .input{
-    position: relative; 
+
+.wrapper .input {
+    position: relative;
     width: 100%;
     height: 50px;
     background: #2c101000;
     margin: 30px 0;
 }
-.input input{
+
+.input input {
     width: 100%;
     height: 100%;
     background: transparent;
@@ -43,40 +52,46 @@ body{
     border-radius: 40px;
     font-size: 16px;
     color: #fff;
-    padding:20px 45px 20px 20px;
+    padding: 20px 45px 20px 20px;
 }
-.input input::placeholder{
+
+.input input::placeholder {
     color: #fff;
 }
-.input i{
+
+.input i {
     position: absolute;
     right: 20px;
-    top:50%;
+    top: 50%;
     transform: translateY(-50%);
     font-size: 20px;
 }
-.wrapper .remember{
+
+.wrapper .remember {
     display: flex;
     justify-content: space-between;
     font-size: 14.5px;
-    margin:-15px 0 15px;
+    margin: -15px 0 15px;
 }
 
-.wrapper .remember label input{
+.wrapper .remember label input {
     accent-color: #fff;
     margin-right: 3px;
 }
-.wrapper .remember a{
+
+.wrapper .remember a {
     margin-top: 0;
     margin-right: 8px;
     font-size: 12px;
     color: #fff;
     text-decoration: none;
 }
-.wrapper .remember a:hover{
+
+.wrapper .remember a:hover {
     text-decoration: underline;
 }
-.wrapper .btn{
+
+.wrapper .btn {
     width: 100%;
     height: 45px;
     border: none;
@@ -89,29 +104,60 @@ body{
     cursor: pointer;
     font-weight: 600;
 }
-.wrapper .btn:hover{
+
+.wrapper .btn:hover {
     background: #c94592;
 }
+
 .wrapper .bx.bxs-hide {
     display: none;
 }
-.wrapper .registLink{
+
+.wrapper .registLink {
     font-size: 14.5px;
     text-align: center;
-    margin:20px 0 15px;
+    margin: 20px 0 15px;
 }
-.registLink p a{
+
+.registLink p a {
     color: #a51268;
     text-decoration: none;
     font-weight: 600;
 }
-.registLink p a:hover{
+
+.registLink p a:hover {
     text-decoration: underline;
 }
+
 .dodo {
     display: flex;
     color: #bd2289;
     font-size: 12px;
-    justify-content: center; 
+    justify-content: center;
 }
 
+/* Media Queries */
+@media (max-width: 600px) {
+    .wrapper {
+        padding: 20px; /* Reduced padding for smaller screens */
+    }
+
+    .wrapper h1 {
+        font-size: 24px; /* Smaller font size for smaller screens */
+    }
+
+    .input input {
+        padding: 10px 30px 10px 10px; /* Adjusted padding for smaller screens */
+    }
+
+    .wrapper .btn,
+    .wrapper .input {
+        border-radius: 20px; /* Smaller border radius for a more compact look */
+    }
+
+    .wrapper .remember a,
+    .wrapper .remember label,
+    .wrapper .registLink {
+        font-size: 12px; /* Adjusted font size for readability on smaller screens */
+    }
+}
